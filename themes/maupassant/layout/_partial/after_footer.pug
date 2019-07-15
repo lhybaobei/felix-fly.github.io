@@ -51,5 +51,9 @@ if page.mathjax
 if page.mathjax2
   include mathjax2.pug
 
-script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
-script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
+a#rocket.show(href='#top')
+
+script(type='text/javascript', src=url_for(theme.js) + '/theme.min.js' + '?v=' + theme.version, async)
+//- script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
+//- script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
+//- script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)

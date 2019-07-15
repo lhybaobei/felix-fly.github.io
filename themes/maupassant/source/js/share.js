@@ -24,12 +24,11 @@
     } else {
       var html = [
         '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-input" value="' + url + '">',
           '<div class="article-share-links">',
-            '<a href="//twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-            '<a href="//www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-            '<a href="//service.weibo.com/share/share.php?title=' + title + '&url=' + encodedUrl + '&searchPic=true&style=number' + '" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-            '<a href="' + qrcode_img + '" class="article-share-qrcode" target="_blank" title="QR code"></a>',
+            '<a href="//service.weibo.com/share/share.php?title=' + title + '&url=' + encodedUrl + '&searchPic=true&style=number' + '" class="icon-weibo" target="_blank" title="Weibo"></a>',
+            '<a href="//connect.qq.com/widget/shareqq/index.html?url=' + encodedUrl + '&title=' + title + '" class="icon-qq" target="_blank" title="QQ"></a>',
+            '<a href="//shuo.douban.com/!service/share?href=' + encodedUrl + '&name=' + title + '" class="icon-douban" target="_blank" title="QQ"></a>',
+            '<a href="' + qrcode_img + '" class="icon-qrcode" target="_blank" title="QR code"></a>',
             '<div class="qrcode"><img src=' + qrcode_img + '></div>',
           '</div>',
         '</div>'

@@ -4,6 +4,7 @@ if theme.google_search == true
     form(action='//www.google.com/search' method='get' accept-charset='utf-8' class='search-form' target='_blank')
       input(type='text' name='q' maxlength='20' placeholder='Google Search')
       input(type='hidden' name='sitesearch' value=domain)
+      i(class='icon-google')
 if theme.baidu_search == true
   .widget
     form(action='//www.baidu.com/baidu' method='get' accept-charset='utf-8' class='search-form' target='_blank')
@@ -13,6 +14,7 @@ if theme.baidu_search == true
       input(name='cl' type='hidden' value='3')
       input(name='ct' type='hidden' value='2097152')
       input(name='s' type='hidden' value='on')
+      i(class='icon-baidu')
 if theme.swiftype
   .widget
     input.st-default-search-input(placeholder='Search' type='text')
