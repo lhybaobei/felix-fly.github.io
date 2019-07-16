@@ -2,7 +2,6 @@ if theme.gitalk.enable == true
   #gitalkWrapper
   link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css')
   script(type='text/javascript' src='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js' defer)
-  script(type='text/javascript', src=url_for(theme.js) + '/gitalk.js', defer)
   script.
     var gitalkConfig = {
       clientID: '#{theme.gitalk.client_id}',

@@ -9,11 +9,12 @@
 a#toTop(href='#top')
   i(class='icon-top')
 
-//- script(type='text/javascript', src=url_for(theme.js) + '/share.js', async)
-//- script(type='text/javascript', src=url_for(theme.js) + '/totop.js', async)
-//- script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js', async)
-//- script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js', async)
-script(type='text/javascript', src=url_for(theme.js) + '/theme.min.js', async)
+script(type='text/javascript', src='//lib.baomitu.com/jquery/3.4.0/jquery.min.js', defer)
+script(type='text/javascript', src=url_for(theme.js) + '/theme.min.js', defer)
+//- script(type='text/javascript', src=url_for(theme.js) + '/share.js')
+//- script(type='text/javascript', src=url_for(theme.js) + '/totop.js')
+//- script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js')
+//- script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js')
 
 if theme.busuanzi == true
   script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
