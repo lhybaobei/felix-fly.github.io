@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'itcao';
   src:
-    url('fonts/itcao.ttf?xslnqx') format('truetype'),
-    url('fonts/itcao.woff?xslnqx') format('woff'),
-    url('fonts/itcao.svg?xslnqx#itcao') format('svg');
+    url('fonts/itcao.ttf?aawlq9') format('truetype'),
+    url('fonts/itcao.woff?aawlq9') format('woff'),
+    url('fonts/itcao.svg?aawlq9#itcao') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +23,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-top:before {
+  content: "\ea41";
+}
+.icon-star:before {
+  content: "\e9d7";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-more:before {
+  content: "\f101";
+}
+.icon-prev:before {
+  content: "\f0d9";
+}
+.icon-next:before {
+  content: "\f0da";
+}
 .icon-share:before {
   content: "\ea82";
 }
