@@ -1,4 +1,9 @@
-(function(params) {
-  var gitalk = new Gitalk(params);
-  gitalk.render('gitalkWrapper');
-})(gitalkConfig);
+(function() {
+  if (!window.gitalkConfig) return;
+  var onload = window.onload;
+  window.onload = function() {
+    if (onload) onload();
+    var gitalk = new Gitalk(window.gitalkConfig);
+    gitalk.render('gitalkWrapper');
+  }
+})();
