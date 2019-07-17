@@ -1,4 +1,4 @@
-#footer= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
+.footer= 'Copyright © ' + date(Date.now(), 'YYYY') + ' '
   a(href=url_for('.'), rel='nofollow')= config.title + '.'
   |  Powered by
   a(rel='nofollow', target='_blank', href='https://hexo.io')  Hexo.
@@ -6,18 +6,14 @@
   |  by
   a(rel='nofollow', target='_blank', href='https://github.com/pagecho')  Cho.
 
-a#toTop(href='#top')
+a.to-top(href='#top')
   i(class='icon-top')
 
-script(type='text/javascript', src='//lib.baomitu.com/jquery/3.4.0/jquery.min.js', defer)
+script(type='text/javascript', src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js', defer)
 script(type='text/javascript', src=url_for(theme.js) + '/theme.min.js', defer)
-//- script(type='text/javascript', src=url_for(theme.js) + '/share.js')
-//- script(type='text/javascript', src=url_for(theme.js) + '/totop.js')
-//- script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js')
-//- script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js')
 
 if theme.busuanzi == true
-  script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+  script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', defer)
 
 if theme.google_analytics
   script.

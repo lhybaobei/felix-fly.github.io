@@ -1,42 +1,12 @@
-/*
-  pure css setting
-  When setting the primary font stack, apply it to the Pure grid units along
-  with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
-  specific font stacks to ensure the greatest OS/browser compatibility.
-  */
-html,
-button,
-input,
-select,
-textarea,
-.MJXc-TeX-unknown-R,
-.pure-g [class*="pure-u"] {
-  /* Set your content font stack here: */
-  font-family: "Microsoft YaHei", SimSun, sans-serif !important;
-}
-
 body {
   background-color: #fff;
   color: #444;
   font-family: "Microsoft YaHei", SimSun, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
+  margin: 0;
 }
 
-.body_container {
-  padding: 0 60px;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-.content_container {
-  padding-right: 50px;
-  padding-top: 20px;
-}
-
-a,
-button.submit {
+a, button.submit {
   color: #6e7173;
   text-decoration: none;
   -webkit-transition: all 0.1s ease-in;
@@ -44,85 +14,139 @@ button.submit {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-
-a:hover,
-a:active {
+a:hover, a:active {
   color: #444;
 }
-
 a:focus {
   outline: auto;
-}
-
-.clear {
-  clear: both;
 }
 
 div {
   box-sizing: border-box;
 }
 
-#header {
-  padding: 58px 0 0;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-  position: relative;
+.container {
+  padding: 15px;
+  max-width: 1150px;
+  margin: 0 auto;
 }
-#header .site-name {
-  margin-bottom: 40px;
+
+.wrapper:after {
+  display: block;
+  content: '';
+  clear: both;
 }
-#header .site-name h1 {
+
+.main {
   padding: 0;
-  margin: 0;
-  height: 0;
-  overflow: hidden;
 }
-#header .site-name #logo {
-  font: bold 38px/1.12 "Times New Roman", Georgia, Times, sans-serif;
+
+.sidebar {
+  margin-top: 25px;
+}
+
+.header {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.header .logo {
+  display: inline-block;
+  font-size: 40px;
   color: #555;
 }
-#header .site-name #logo span,
-#header .site-name #logo:hover {
+.header .logo:hover {
   color: #777;
 }
-#header .site-name .description {
+.header .description {
   margin: 0.2em 0 0;
   color: #999;
 }
-#header #nav-menu {
+
+.nav-menu {
   margin: 10px 0 -1px;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
-#header #nav-menu a {
+.nav-menu a {
   display: inline-block;
-  padding: 3px 20px 3px;
-  line-height: 30px;
+  padding: 10px 20px;
   color: #444;
   font-size: 13px;
   border: 1px solid transparent;
 }
-#header #nav-menu a:hover {
+.nav-menu a:hover {
   border-bottom-color: #444;
 }
-#header #nav-menu a.current {
+.nav-menu a.current {
   border: 1px solid #ddd;
   border-bottom-color: #fff;
 }
 
-#sidebar {
-  border-left: 1px solid #ddd;
-  padding-left: 35px;
-  margin-top: 40px;
-  padding-bottom: 20px;
-  word-wrap: break-word;
+.to-top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  visibility: hidden;
 }
-#sidebar .widget {
+.to-top i {
+  background-color: #fff;
+  font-size: 48px;
+  opacity: 0.7;
+}
+.to-top:hover i {
+  opacity: 1;
+}
+.to-top.show {
+  visibility: visible;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  .main {
+    float: left;
+    width: 75%;
+    padding-right: 20px;
+  }
+  .header {
+    text-align: left;
+  }
+  .header .logo {
+    margin-top: 30px;
+  }
+  .sidebar {
+    float: right;
+    width: 24.98%;
+    padding-left: 20px;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  .nav-menu {
+    text-align: right;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    padding: 30px 40px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+.widget {
   margin-bottom: 30px;
 }
-#sidebar .widget .widget-title {
+.widget-title {
   color: #6e7173;
   line-height: 2.7;
   margin-top: 0;
@@ -131,62 +155,47 @@ div {
   display: block;
   font-weight: normal;
 }
-#sidebar .widget .comments-title {
-  color: #6e7173;
-  line-height: 2.7;
-  margin-top: 0;
-  font-size: 16px;
-  border-bottom: 0px solid #ddd;
-  display: block;
-  font-weight: normal;
-}
-#sidebar .widget .tagcloud {
+.tag-cloud {
   margin-top: 10px;
 }
-#sidebar .widget .tagcloud a {
+.tag-cloud a {
   line-height: 1.5;
   padding: 5px;
 }
-#sidebar .widget ul {
+.category-list {
   list-style: none;
   padding: 0;
 }
-#sidebar .widget ul li {
+.category-list li {
   margin: 5px 0;
   line-height: 1.5;
 }
-#sidebar .widget .category-list-child {
+.category-list-child {
   padding-left: 20px;
 }
-#sidebar .widget .category-list-count {
+.category-list-count {
   padding-left: 5px;
   color: #6e7173;
 }
-#sidebar .widget .category-list-count::before {
+.category-list-count::before {
   content: "(";
 }
-#sidebar .widget .category-list-count::after {
+.category-list-count::after {
   content: ")";
 }
-#sidebar .widget .search-form {
+.search-form {
   position: relative;
   overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 5px;
 }
-#sidebar .widget .search-form input {
+.search-form input {
   padding: 7px 11px 7px 28px;
   line-height: 16px;
-  border: 1px solid #bbb;
-  width: 65%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  border: 0;
+  outline: none;
 }
-#sidebar .widget .search-form i {
+.search-form i {
   position: absolute;
   left: 8px;
   top: 8px;
@@ -204,30 +213,30 @@ div {
 .post {
   padding: 25px 0 15px;
 }
-.post .post-title {
+.post-title {
   margin: 0;
   color: #555;
   text-align: left;
   font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia,
     Times, sans-serif;
 }
-.post .post-title a {
+.post-title a {
   color: #555;
 }
-.post .post-meta {
+.post-meta {
   padding: 0;
   margin: 15px 0 0;
   color: #6e7173;
   text-indent: 0.15em;
 }
-.post .post-meta i {
+.post-meta i {
   margin-right: 3px;
   vertical-align: middle;
 }
-.post .post-meta > span {
+.post-meta > span {
   vertical-align: middle;
 }
-.post .post-content {
+.post-content {
   clear: left;
   font-size: 15px;
   line-height: 1.77;
@@ -237,38 +246,38 @@ div {
   text-justify: distribute;
   word-break: normal;
 }
-.post .post-content h2 {
+.post-content h2 {
   margin: 1.4em 0 1.1em;
   border-bottom: 1px solid #eee;
   overflow: hidden;
 }
-.post .post-content h3 {
+.post-content h3 {
   margin: 1.4em 0 1.1em;
 }
-.post .post-content pre code {
+.post-content pre code {
   padding: 0 2em;
 }
-.post .post-content p {
+.post-content p {
   margin: 0 0 1.234em;
   word-break: break-word;
   overflow-wrap: break-word;
 }
-.post .post-content p code {
+.post-content p code {
   display: inline-block;
   margin: 0 5px;
   padding: 0 5px;
   background: #f7f8f8;
   font-family: Menlo, Consolas, monospace !important;
 }
-.post .post-content p a {
+.post-content p a {
   color: #01579f;
   padding-bottom: 2px;
   word-break: normal;
 }
-.post .post-content p a:hover {
+.post-content p a:hover {
   text-decoration: underline;
 }
-.post .post-content .caption {
+.post-content .caption {
   color: #444;
   display: block;
   font-size: 0.9em;
@@ -276,52 +285,52 @@ div {
   position: relative;
   text-align: center;
 }
-.post .post-content hr {
+.post-content hr {
   margin: 2.4em auto;
   border: none;
   border-top: 1px solid #eee;
   position: relative;
 }
-.post .post-content img {
+.post-content img {
   max-width: 100%;
   padding: 0.5em 0;
   margin: auto;
   display: block;
 }
-.post .post-content ul,
-.post .post-content ol {
+.post-content ul,
+.post-content ol {
   border-radius: 3px;
   margin: 1em 0;
 }
-.post .post-content ul ul,
-.post .post-content ol ul {
+.post-content ul ul,
+.post-content ol ul {
   margin: 0;
 }
-.post .post-content ul code,
-.post .post-content ol code {
+.post-content ul code,
+.post-content ol code {
   display: inline-block;
   margin: 0 5px;
   padding: 0px 5px;
   background: #f7f8f8;
   font-family: Menlo, Consolas, monospace !important;
 }
-.post .post-content ul a,
-.post .post-content ol a {
+.post-content ul a,
+.post-content ol a {
   color: #01579f;
   padding-bottom: 2px;
   word-break: normal;
 }
-.post .post-content ul a:hover,
-.post .post-content ol a:hover {
+.post-content ul a:hover,
+.post-content ol a:hover {
   text-decoration: underline;
 }
-.post .tags {
+.post-tags {
   padding-bottom: 1em;
 }
-.post .tags a {
+.post-tags a {
   margin-right: 0.5em;
 }
-.post .tags a i {
+.post-tags a i {
   vertical-align: middle;
   margin-right: 2px;
 }
@@ -369,18 +378,17 @@ div {
   padding: 5px 5px;
 }
 
-#footer {
-  padding: 0.8em 0 3.6em;
-  margin-top: 1em;
+.footer {
+  padding-top: 30px;
   line-height: 2.5;
   color: #6e7173;
   text-align: center;
 }
-#footer span {
+.footer span {
   font-size: 0.9em;
 }
 
-/* for archive page starts*/
+/* for archive page */
 .post-archive {
   font-size: 15px;
   line-height: 2;
@@ -388,52 +396,33 @@ div {
 }
 .post-archive h2 {
   margin: 0;
-  font: bold 25px / 1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia,
-    Times, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
 }
 .post-archive .date {
   padding-right: 0.7em;
 }
 
-/* for archive page ends*/
-/* middle*/
-@media print, screen and (max-width: 48em) {
-  .body_container {
-    padding: 0 30px;
-  }
-  .content_container {
-    padding-right: 15px;
-  }
-  .hidden_mid_and_down {
-    display: none !important;
-  }
-  #sidebar {
-    border-left-width: 0px;
-  }
-  #header .site-name {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  #header #nav-menu {
-    position: relative;
-    text-align: center;
-  }
-  #header #nav-menu a {
-    padding: 0 15px;
-    line-height: 27px;
-    height: 27px;
-    font-size: 13px;
-  }
+/* read more */
+.read-more a {
+  font-size: 14px;
+  color: #444;
+  margin: -10px 0;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  float: right;
 }
-
-/* small*/
-@media print, screen and (max-width: 35.5em) {
-  .body_container {
-    padding: 0 20px;
-  }
-  .content_container {
-    padding-right: 0;
-  }
+.read-more a i {
+  vertical-align: middle;
+  margin-left: 2px;
+}
+.read-more a span {
+  vertical-align: middle;
+}
+.read-more a:hover {
+  background: #f8f8f8;
+  border-bottom-color: #d26911;
 }
 
 blockquote,
@@ -468,53 +457,6 @@ em {
 
 pre {
   margin: 2em 0;
-}
-
-.hidden1 {
-  display: none;
-}
-
-/* back-to-top toTop*/
-@media print, screen and (min-width: 48em) {
-  #toTop {
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    visibility: hidden;
-  }
-  #toTop i {
-    background-color: #fff;
-    font-size: 48px;
-    opacity: 0.7;
-  }
-  #toTop:hover i {
-    opacity: 1;
-  }
-  #toTop.show {
-    visibility: visible;
-  }
-}
-
-/* read more*/
-.readmore a {
-  font-size: 14px;
-  color: #444;
-  margin: -10px 0;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  float: right;
-}
-.readmore a i {
-  vertical-align: middle;
-  margin-left: 2px;
-}
-.readmore a span {
-  vertical-align: middle;
-}
-.readmore a:hover {
-  background: #f8f8f8;
-  border-bottom-color: #d26911;
 }
 
 /* syntax highlight*/
@@ -591,13 +533,6 @@ figure.highlight .line,
 .codeblock .line {
   height: 1.3em;
   font-size: 13px;
-}
-
-.gist .line,
-.gist .line-number {
-  font-family: Menlo, Consolas, monospace;
-  font-size: 1em;
-  margin: 0 0 5px 0;
 }
 
 .highlight .comment {
@@ -1272,28 +1207,6 @@ table tr:nth-child(2n) {
 }
 .article-share-links .qrcode {
   display: none;
-}
-
-/* search result*/
-ul.search-result-list {
-  padding-left: 10px;
-}
-
-a.search-result-title {
-  font-weight: bold;
-  font-size: 15px;
-  color: #555;
-}
-
-p.search-result {
-  color: #444;
-  text-align: justify;
-}
-
-em.search-keyword {
-  font-weight: bold;
-  font-style: normal;
-  color: #01579f;
 }
 
 .post-copyright {

@@ -8,7 +8,6 @@ tags:
 url: 160.html
 id: 160
 categories:
-  - 互联网络
   - 电脑医生
 date: 2009-04-09 02:19:32
 ---

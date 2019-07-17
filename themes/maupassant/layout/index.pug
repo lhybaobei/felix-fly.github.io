@@ -35,7 +35,7 @@ block content
         else
           .post-content
             != post.content.substring(0, br)
-      p(class='readmore')
+      p(class='read-more')
         a(href=url_for(post.path))
           span= __('Readmore')
           i(class='icon-more')

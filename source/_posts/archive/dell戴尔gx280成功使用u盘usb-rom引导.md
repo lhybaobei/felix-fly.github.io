@@ -6,7 +6,6 @@ tags:
 url: 73.html
 id: 73
 categories:
-  - 文件分享
   - 电脑医生
 date: 2009-03-17 19:18:22
 ---

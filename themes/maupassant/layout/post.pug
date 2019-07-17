@@ -52,7 +52,7 @@ block content
         !=__('shareto')
 
     if page.tags
-      .tags
+      .post-stags
         for tag in page.tags.toArray()
           a(href=url_for(tag.path))
             i(class='icon-tag')

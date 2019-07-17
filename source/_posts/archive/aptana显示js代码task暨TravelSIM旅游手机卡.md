@@ -10,7 +10,6 @@ tags:
 url: 1054.html
 id: 1054
 categories:
-  - 互联网络
   - 编程开发
 date: 2011-10-25 21:03:35
 ---

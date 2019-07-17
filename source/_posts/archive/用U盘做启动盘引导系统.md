@@ -7,7 +7,6 @@ tags:
 url: 72.html
 id: 72
 categories:
-  - 文件分享
   - 电脑医生
 date: 2009-03-17 18:40:04
 ---

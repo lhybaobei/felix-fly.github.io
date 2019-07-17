@@ -7,7 +7,6 @@ tags:
 url: 222.html
 id: 222
 categories:
-  - 互联网络
   - 电脑医生
 date: 2009-05-16 07:22:34
 ---

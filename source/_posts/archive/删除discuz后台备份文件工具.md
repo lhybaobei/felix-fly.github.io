@@ -6,7 +6,6 @@ tags:
 url: 78.html
 id: 78
 categories:
-  - 互联网络
   - 文件分享
 date: 2009-03-19 19:02:28
 ---

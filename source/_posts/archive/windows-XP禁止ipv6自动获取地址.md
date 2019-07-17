@@ -7,7 +7,6 @@ tags:
 url: 155.html
 id: 155
 categories:
-  - 互联网络
   - 电脑医生
 date: 2009-04-05 06:47:37
 ---

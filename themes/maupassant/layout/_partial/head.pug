@@ -6,12 +6,9 @@ head
   meta(content='telephone=no', name='format-detection')
   meta(name='description', content=config.description)
   block title
+  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/theme.min.css')
   //- link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/icon.css')
   //- link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/theme.css')
-  link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/theme.min.css')
-  link(rel='stylesheet', type='text/css', href='//lib.baomitu.com/normalize/8.0.1/normalize.min.css')
-  link(rel='stylesheet', type='text/css', href='//lib.baomitu.com/pure/1.0.0/pure-min.css')
-  link(rel='stylesheet', type='text/css', href='//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css')
   link(rel='icon', mask='',sizes='any', href=url_for('favicon.png'))
   link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.png'))
   if config.feed
