@@ -10,7 +10,7 @@ a.to-top(href='#top')
   i(class='icon-top')
 
 script(type='text/javascript', src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js', defer)
-script(type='text/javascript', src=url_for(theme.js) + '/theme.min.js', defer)
+script(type='text/javascript', src='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io/js/theme.min.js', defer)
 
 if theme.busuanzi == true
   script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', defer)
@@ -24,11 +24,4 @@ if theme.google_analytics
     ga('create','#{theme.google_analytics}','auto');ga('send','pageview');
 
 if theme.baidu_analytics
-  script.
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = 'https://hm.baidu.com/hm.js?' + '#{theme.baidu_analytics}';
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-      })();
+  script(src='https://hm.baidu.com/hm.js?' + theme.baidu_analytics, defer)

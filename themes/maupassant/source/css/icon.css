@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'itcao';
+  font-display: auto;
   src:
     url('fonts/itcao.ttf?aawlq9') format('truetype'),
     url('fonts/itcao.woff?aawlq9') format('woff'),
