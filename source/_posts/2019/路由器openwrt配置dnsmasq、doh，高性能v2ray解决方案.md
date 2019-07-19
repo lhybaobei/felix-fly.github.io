@@ -1,7 +1,6 @@
 ---
 title: 路由器openwrt配置dnsmasq、doh，高性能v2ray解决方案
 date: 2019-07-14 16:07:58
-url: 2019-07-14.html
 tags:
   - openwrt
   - v2ray
