@@ -1,3 +1,6 @@
+layout: false
+title: "404"
+---
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -567,11 +570,10 @@
         "73": "2009/0317",
         "9": "2008/1205"
       };
-      var reg = new RegExp('(^|&)source=([^&]*)(&|$)');
-      var match = window.location.search.substr(1).match(reg);
+      var match = window.location.pathname.match(/^\/post_([^.]+).html/);
       var url;
       if (match) {
-        url = urlMap[match[2]];
+        url = urlMap[match[1]];
       }
       window.location.href =  url ? url + '.html' : '/';
     </script>
