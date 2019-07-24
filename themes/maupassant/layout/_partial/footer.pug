@@ -10,5 +10,5 @@ if (is_post())
 if env.env === 'development'
   script(src='/js/theme.js', defer)
 else
-  script(src='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io/js/theme.min.js', defer)
+  script(src='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io@' + theme.version + '/js/theme.min.js', defer)
   script(src='https://hm.baidu.com/hm.js?' + theme.baidu_analytics, defer)
