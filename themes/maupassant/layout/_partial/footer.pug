@@ -7,8 +7,8 @@ a.to-top(href='#top')
 script(src='//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js', defer)
 if (is_post())
   script(src='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', defer)
-if env.env === 'production'
+if env.env === 'development'
+  script(src='/js/theme.js', defer)
+else
   script(src='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io/js/theme.min.js', defer)
   script(src='https://hm.baidu.com/hm.js?' + theme.baidu_analytics, defer)
-else
-  script(src='/js/theme.js', defer)

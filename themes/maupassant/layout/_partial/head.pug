@@ -8,9 +8,9 @@ head
   block title
   link(rel='icon', mask='',sizes='any', href=url_for('favicon.png'))
   link(rel='Shortcut Icon', type='image/x-icon', href=url_for('favicon.png'))
-if env.env === 'production'
-  link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io/css/theme.min.css')
-else
+if env.env === 'development'
   link(rel='stylesheet', type='text/css', href='/css/theme.css')
+else
+  link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/gh/felix-fly/felix-fly.github.io/css/theme.min.css')
 if (is_post())
   link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css')
