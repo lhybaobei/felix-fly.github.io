@@ -14,12 +14,6 @@ block content
         i(class='icon-folder-open')
         for category in page.categories.toArray()
           a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        span= ' | '
-        i(class='icon-star')
-        span#busuanzi_container_page_pv
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
       if theme.wordcount == true
         span= ' | '
         i(class="icon-keyboard-o")
@@ -46,10 +40,13 @@ block content
               != __('copyright_default_text')
       br
 
-    if theme.shareto == true
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))
-        i(class='icon-share')
-        !=__('shareto')
+    .share
+      i.icon-share
+      span=__('shareto')
+      .share-box
+        i.icon-weibo(title="微博" data-type="weibo")
+        i.icon-qq(title="QQ" data-type="qq")
+        i.icon-douban(title="豆瓣" data-type="douban")
 
     if page.tags
       .post-stags
@@ -69,5 +66,4 @@ block content
             span= page.next.title
             i(class='icon-next')
 
-    if page.comments
-      include _partial/comments.pug
+    #comment
