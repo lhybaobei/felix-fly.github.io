@@ -1,3 +1,98 @@
+@font-face {
+  font-family: 'itcao';
+  font-display: auto;
+  src:
+    url('fonts/itcao.ttf?aawlq9') format('truetype'),
+    url('fonts/itcao.woff?aawlq9') format('woff'),
+    url('fonts/itcao.svg?aawlq9#itcao') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'itcao' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-top:before {
+  content: "\ea41";
+}
+.icon-star:before {
+  content: "\e9d7";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-more:before {
+  content: "\f101";
+}
+.icon-prev:before {
+  content: "\f0d9";
+}
+.icon-next:before {
+  content: "\f0da";
+}
+.icon-share:before {
+  content: "\ea82";
+}
+.icon-qrcode:before {
+  content: "\e938";
+}
+.icon-weibo:before {
+  content: "\ea9a";
+}
+.icon-douban:before {
+  content: "\e906";
+}
+.icon-qq:before {
+  content: "\e90b";
+}
+.icon-tag:before {
+  content: "\e900";
+}
+.icon-google:before {
+  content: "\e901";
+  color: #4285f4;
+}
+.icon-baidu:before {
+  content: "\e902";
+  color: #2319dc;
+}
+.icon-external-link:before {
+  content: "\e903";
+}
+.icon-folder-open:before {
+  content: "\e904";
+}
+.icon-hourglass-half:before {
+  content: "\e907";
+}
+.icon-keyboard-o:before {
+  content: "\e905";
+}
+.icon-quill:before {
+  content: "\e908";
+}
+.icon-user:before {
+  content: "\e923";
+}
+.icon-home:before {
+  content: "\e909";
+}
+.icon-archive:before {
+  content: "\e90a";
+}
+
 body {
   background-color: #fff;
   color: #444;
@@ -467,7 +562,7 @@ figure.highlight,
   line-height: 1.1em;
   color: #333;
   padding-top: 15px;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 figure.highlight table,
 .codeblock table {
@@ -526,8 +621,7 @@ figure.highlight .code,
 figure.highlight .code pre,
 .codeblock .code pre {
   max-width: 700px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 figure.highlight .line,
 .codeblock .line {
@@ -1152,61 +1246,47 @@ table tr:nth-child(2n) {
 }
 
 /* article-share*/
-.article-share-link {
+.share {
   cursor: pointer;
   float: right;
   margin-left: 20px;
+  position: relative;
 }
-.article-share-link i {
-  margin-right: 5px;
-}
-
-.article-share-box {
-  position: absolute;
-  display: none;
-  background: #fff;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-  margin-left: -145px;
-  overflow: hidden;
-  z-index: 1;
-}
-.article-share-box.on {
+.share:hover .share-box {
   display: block;
 }
-
-.article-share-links {
-  background: #eee;
+.share > i {
+  margin-right: 5px;
 }
-.article-share-links a {
-  padding: 19px;
+.share-box {
+  position: absolute;
+  display: none;
+  background: #eee;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+}
+.share-box i {
+  padding: 15px;
   display: inline-block;
   position: relative;
   color: #999;
-  font-size: 16px;
+  font-size: 20px;
   text-shadow: 0 1px #fff;
 }
-.article-share-links a:hover {
+.share-box i:hover {
   color: #fff;
 }
-.article-share-links a.icon-qq:hover {
+.share-box i.icon-qq:hover {
   background: #00aced;
 }
-.article-share-links a.icon-weibo:hover {
+.share-box i.icon-weibo:hover {
   background: #d44137;
 }
-.article-share-links a.icon-douban:hover {
+.share-box i.icon-douban:hover {
   background: #38ad5a;
-}
-.article-share-links a.icon-qrcode:hover {
-  background: #fcb211;
-}
-.article-share-links a.icon-qrcode:hover ~ .qrcode {
-  display: block;
-  text-align: center;
-}
-.article-share-links .qrcode {
-  display: none;
 }
 
 .post-copyright {
