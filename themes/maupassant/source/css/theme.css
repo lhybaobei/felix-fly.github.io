@@ -618,11 +618,6 @@ figure.highlight .code,
   padding: 0.3em 15px 0.3em 1em;
   width: 100%;
 }
-figure.highlight .code pre,
-.codeblock .code pre {
-  max-width: 700px;
-  overflow: hidden;
-}
 figure.highlight .line,
 .codeblock .line {
   height: 1.3em;

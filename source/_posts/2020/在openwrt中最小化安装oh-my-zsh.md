@@ -31,20 +31,20 @@ categories:
 * zsh
 * ca-certificates
 
-```shell
+```bash
 opkg update
 opkg install wget unzip zsh ca-certificates
 ```
 
 ## 安装
 
-```shell
+```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/felix-fly/openwrt-ohmyzsh/master/install.sh)"
 ```
 
 ## 设置 zsh 为默认 shell
 
-```shell
+```bash
 which zsh && sed -i -- 's:/bin/ash:'`which zsh`':g' /etc/passwd
 ```
 
@@ -52,6 +52,6 @@ which zsh && sed -i -- 's:/bin/ash:'`which zsh`':g' /etc/passwd
 
 ## 卸载
 
-```shell
+```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/felix-fly/openwrt-ohmyzsh/master/uninstall.sh)"
 ```
