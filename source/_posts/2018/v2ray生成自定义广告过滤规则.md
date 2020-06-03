@@ -13,7 +13,7 @@ date: 2018-10-27 22:06:09
 
 本文最初发布在github上，且后续的更新也会在那边，这里只是做个记录，以备不时之需。
 
-获取脚本工具及查看最新的内容请移步 [https://gitee.com/felix-fly/v2ray-adlist](https://gitee.com/felix-fly/v2ray-adlist)
+获取脚本工具及查看最新的内容请移步 [https://github.com/felix-fly/v2ray-adlist](https://github.com/felix-fly/v2ray-adlist)
 
 通过官方文档可以获知v2ray天生是支持block功能，正好可以用来过滤广告。在openwrt的生态圈里目前比较成熟的有两大方案：adbyby和koolproxy。之前也使用过，效果还是不错的，不过有了v2ray之后，总感觉组合使用不是我想要的，效果、速度等等这里不做讨论，有兴趣的小伙伴可以去做个对比测试。
 

@@ -11,9 +11,9 @@ categories:
 date: 2018-10-27 19:25:46
 ---
 
-最新流程会发布在码云（gitee.com）上，这里只是做个记录，以备不时之需。
+最新流程会发布在码云（github.com）上，这里只是做个记录，以备不时之需。
 
-查看最新的流程请移步 [https://gitee.com/felix-fly/v2ray-openwrt](https://gitee.com/felix-fly/v2ray-openwrt)
+查看最新的流程请移步 [https://github.com/felix-fly/v2ray-openwrt](https://github.com/felix-fly/v2ray-openwrt)
 
 本文为在路由器openwrt中使用v2ray的简单流程，相关的配置请参考官方文档。
 
