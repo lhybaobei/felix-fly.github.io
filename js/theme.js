@@ -13,8 +13,8 @@ $(function() {
   // Load comment
   if ($("#comment").length) {
     var gitalk = new Gitalk({
-      clientID: "be0f473e7c298869acd2",
-      clientSecret: "9a27862b9f3164f89303a63725739ee1fb49ba73",
+      clientID: "6547db074e10fdcf2ee5",
+      clientSecret: "56db5ea786632526b128d0164f7d4c5fe92d1dad",
       repo: "felix-fly.github.io",
       owner: "felix-fly",
       admin: ["felix-fly"],
