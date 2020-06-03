@@ -6,7 +6,10 @@
     "version": "4.2.1"
   },
   "scripts": {
-    "d": "hexo clean && export NODE_ENV=production || set NODE_ENV=production&& hexo d"
+    "repub": "hexo clean && export NODE_ENV=production || set NODE_ENV=production&& hexo d",
+    "build": "hexo g",
+    "dev": "hexo g && hexo server",
+    "pub": "hexo g && hexo d"
   },
   "dependencies": {
     "axios": "^0.19.2",

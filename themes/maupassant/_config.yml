@@ -26,4 +26,4 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - tag
   # - recent_posts
 
-version: "1.0"
+version: "1.1"

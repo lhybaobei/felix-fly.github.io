@@ -2,26 +2,26 @@ $(function() {
   // Back to top
   $(window).scroll(function() {
     $(window).scrollTop() > 500
-      ? $(".to-top").addClass("show")
-      : $(".to-top").removeClass("show");
+      ? $('.to-top').addClass('show')
+      : $('.to-top').removeClass('show');
   });
-  $(".to-top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, 500);
+  $('.to-top').click(function() {
+    $('html, body').animate({ scrollTop: 0 }, 500);
     return false;
   });
 
   // Load comment
-  if ($("#comment").length) {
+  if ($('#comment').length) {
     var gitalk = new Gitalk({
-      clientID: "be0f473e7c298869acd2",
-      clientSecret: "9a27862b9f3164f89303a63725739ee1fb49ba73",
-      repo: "felix-fly.github.io",
-      owner: "felix-fly",
-      admin: ["felix-fly"],
+      clientID: '6547db074e10fdcf2ee5',
+      clientSecret: '56db5ea786632526b128d0164f7d4c5fe92d1dad',
+      repo: 'felix-fly.github.io',
+      owner: 'felix-fly',
+      admin: ['felix-fly'],
       id: location.pathname,
       distractionFreeMode: false
     });
-    gitalk.render("comment");
+    gitalk.render('comment');
   }
 
   // article-share
